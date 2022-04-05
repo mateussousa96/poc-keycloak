@@ -1,0 +1,375 @@
+{
+	"info": {
+		"_postman_id": "bcf350dc-b255-4cbc-b06f-03d0607f7348",
+		"name": "WSPOT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Autenticação ADM",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "admin-cli",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/realms/master/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"realms",
+						"master",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autenticação de usuario criado",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJESzJraHBMX2VacVd6LWZlQzFDNW1xY3QtUk1YSl94MTFGVjY2YVhfMlA4In0.eyJleHAiOjE2NDkxNjcyNzAsImlhdCI6MTY0OTE2NzIxMCwianRpIjoiNTM0OWE2MzAtYjQxMi00MThmLTlkMjktNjJhODcxYWNmMDljIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9tYXN0ZXIiLCJzdWIiOiI5NDVlYzVjNS0yODIzLTQ3NzMtOTc2OS04ZjFjMDllM2E2MjEiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJzZXNzaW9uX3N0YXRlIjoiNDkzZjFiY2QtYmQ2Ny00ZDE4LWIzMmMtOTc1ZDU1ZWRiYjUxIiwiYWNyIjoiMSIsInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6IjQ5M2YxYmNkLWJkNjctNGQxOC1iMzJjLTk3NWQ1NWVkYmI1MSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWRtaW4ifQ.YdzCiZ5cyVSXngQw6uwyhYwFIBqghUhI7lFhdZiABrkD-bQv5W4lGFWmj9wF-Q1jjL6i98Iq2h7lvym_2sFm0NqqLIJ3PRduoblQbNC9kY1BaUN2ngBlFHCNXM4KMNIR9d3lpSkWYIR40AMiTsjWMVpT8_Q478ymWry7UCeV63JD5b5RGf6Ou-oUl1YrnqiOzTS4JiDqSiLNhtxQ7yW9kaCbQhS3uy2z7v4RPkHFYmrIB4wNf0KsgHJjuTHldwk3Fjx77Yp9PD43AnPJCWzhNx-EeuQaXBRSON9OTlwt8gBNtRdil3PSbpZXM6rtGHoan3dopD-rkPYOwiZJh6VL6w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "admin-cli",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "userexample",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/realms/WSPOT/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"realms",
+						"WSPOT",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autenticação de usuario criado apos alteração de senha",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJESzJraHBMX2VacVd6LWZlQzFDNW1xY3QtUk1YSl94MTFGVjY2YVhfMlA4In0.eyJleHAiOjE2NDkxNjcyNzAsImlhdCI6MTY0OTE2NzIxMCwianRpIjoiNTM0OWE2MzAtYjQxMi00MThmLTlkMjktNjJhODcxYWNmMDljIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9tYXN0ZXIiLCJzdWIiOiI5NDVlYzVjNS0yODIzLTQ3NzMtOTc2OS04ZjFjMDllM2E2MjEiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJzZXNzaW9uX3N0YXRlIjoiNDkzZjFiY2QtYmQ2Ny00ZDE4LWIzMmMtOTc1ZDU1ZWRiYjUxIiwiYWNyIjoiMSIsInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6IjQ5M2YxYmNkLWJkNjctNGQxOC1iMzJjLTk3NWQ1NWVkYmI1MSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWRtaW4ifQ.YdzCiZ5cyVSXngQw6uwyhYwFIBqghUhI7lFhdZiABrkD-bQv5W4lGFWmj9wF-Q1jjL6i98Iq2h7lvym_2sFm0NqqLIJ3PRduoblQbNC9kY1BaUN2ngBlFHCNXM4KMNIR9d3lpSkWYIR40AMiTsjWMVpT8_Q478ymWry7UCeV63JD5b5RGf6Ou-oUl1YrnqiOzTS4JiDqSiLNhtxQ7yW9kaCbQhS3uy2z7v4RPkHFYmrIB4wNf0KsgHJjuTHldwk3Fjx77Yp9PD43AnPJCWzhNx-EeuQaXBRSON9OTlwt8gBNtRdil3PSbpZXM6rtGHoan3dopD-rkPYOwiZJh6VL6w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "admin-cli",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "userexample",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/realms/WSPOT/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"realms",
+						"WSPOT",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar Usuário",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJESzJraHBMX2VacVd6LWZlQzFDNW1xY3QtUk1YSl94MTFGVjY2YVhfMlA4In0.eyJleHAiOjE2NDkxNjY5MzUsImlhdCI6MTY0OTE2Njg3NSwianRpIjoiNTgwNzA0ZjItMGYwMC00MDY4LTk0NzEtYzA3YjY5MmZmNzUxIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9tYXN0ZXIiLCJzdWIiOiI5NDVlYzVjNS0yODIzLTQ3NzMtOTc2OS04ZjFjMDllM2E2MjEiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJzZXNzaW9uX3N0YXRlIjoiMjYyMWNlZTItMWQwYi00YzMwLWI4YTQtZDNhMDc3MDZkMzAwIiwiYWNyIjoiMSIsInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6IjI2MjFjZWUyLTFkMGItNGMzMC1iOGE0LWQzYTA3NzA2ZDMwMCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWRtaW4ifQ.TMDoyJDelip9yNt5BNEQJUsJvmabHxw7kUIlobLXBT0nnNCSpCFCn355jKfYFq4G8DqjBb4V7DSkJCS5hel0wV6-n4JS-8kuLsm7WiX1ne3C7jbH64g2v7UBgUX1oKL9mUTvHAwpXbAWFO-dQXD0MyQmqi2_UHC8JHZrh80A_tfmahAxGt9-ZFSq5xdtqiE0HsEQkfK6CHY-ptt3NHmRaE8zNCM-TDDueHLl_dhhT4VpQNIdTamR7lyK4A_mn4AN1n5tbaatuyHmdNHtWh0yZ1ing5zY-dZIYWMe9nJBS4khqPiFXMdVlX6wUAHKwnuCNzGvg8gecAWvhjXZjQjokQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"User\",\n    \"lastName\": \"Example\",\n    \"email\": \"userexample@email.com\",\n    \"enabled\": \"true\",\n    \"username\": \"userexample\",\n    \"credentials\": [{\n        \"type\": \"password\",\n        \"value\": \"123456\",\n        \"temporary\": false\n    }]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/admin/realms/WSPOT/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"realms",
+						"WSPOT",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar usuário",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIwemU3WkRld204NWhtX3FMcy14MnZ1TDR5cVhTMWFZb0xLb0tXQU9Ic05zIn0.eyJleHAiOjE2NDkxNzYxNTQsImlhdCI6MTY0OTE3NjA5NCwianRpIjoiODIyMGZhOWEtNmE0OS00ZjE0LWE4N2UtZTQ5YmFiMjdjMjg2IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9tYXN0ZXIiLCJzdWIiOiJkY2YxOGUyMS00OTEyLTQ0Y2YtYmVkMy0xZjJmMWIwMjI2YTciLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJzZXNzaW9uX3N0YXRlIjoiMDg5MzI2MWItYmQ1OS00ODg5LThmOWUtNzkwYzcwMzhhYzE1IiwiYWNyIjoiMSIsInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6IjA4OTMyNjFiLWJkNTktNDg4OS04ZjllLTc5MGM3MDM4YWMxNSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWRtaW4ifQ.fqjT1_goN0rfmqqZ65M9K5LpbQD8ZAEQDF1Wm3T00X0BoBATU8vB4rr1GY4r9zZeRfOE3zUYMuLqp5wFhHy2f1XH0hKBJmmFp2-fIRe0gOFxOGOglXipjE3QDHaeI5xQZrAta15iyBBKDoNtqWYIuTpxzSEq0XOKQkcvKV06_5fFvnfhBKhx3cosMVI08-ElcEdl4qcD7jNuMYJaIPX6RkVO0ZxWffwCHjsMRINw0373J4GwGoIYVrJ9mWg9CHbsFbuu00UATbm9ojCjrJNN1B8LWYCdMNL9gVX4KgybBhVrEu4Nsg1kwfrb8GSU6tobSWLStyPWgRiC4pjW08K6Sw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/admin/realms/WSPOT/users?username=userexample",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"realms",
+						"WSPOT",
+						"users"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "userexample"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Usuário",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJESzJraHBMX2VacVd6LWZlQzFDNW1xY3QtUk1YSl94MTFGVjY2YVhfMlA4In0.eyJleHAiOjE2NDkxNjcyMTgsImlhdCI6MTY0OTE2NzE1OCwianRpIjoiMDVhMzU3NzQtZWExMS00YTExLWExNmYtYmY3YTI2MDM1M2E0IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9tYXN0ZXIiLCJzdWIiOiI5NDVlYzVjNS0yODIzLTQ3NzMtOTc2OS04ZjFjMDllM2E2MjEiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJzZXNzaW9uX3N0YXRlIjoiOGFkYTMzMTktNzRhNy00MTc1LWFjNjItNDkyOGE3NDhkYTgyIiwiYWNyIjoiMSIsInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6IjhhZGEzMzE5LTc0YTctNDE3NS1hYzYyLTQ5MjhhNzQ4ZGE4MiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWRtaW4ifQ.eHv-SrzTvlf4wB78zVJVNnHeYlEgQ8rMhZVXrDFtpNLAdc2SGC9_lZ-aqXjGlTKdENR_mlggaBmCLsDvIFTlVpr4XurqfYlZDbXh1kWL5A2h5bpHtGN1RciE5IrQ8Q8WhmMMuVJKSN5YS4iFfahtnkIoiZy5PsI0YMICTje-NDT8JyeSv41d1cVOFIk_Z4kVemFqu2MHYQruFspfjgUTLKDlNxJcI-7cXulPf-q-o98n9QWZUZAWbtAGzW0aoDFZdKf8JWp5O6PF1Ik5oQlH6yziyF0aCtt1iPSL0OJIdsBfMesBoZg2ijKmpat3D3jo0j95YyFHUOCRFWbgpMFG5g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"User\",\n    \"lastName\": \"Example Edited\",\n    \"email\": \"userexample@email.com\",\n    \"enabled\": \"true\",\n    \"username\": \"userexample\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/admin/realms/WSPOT/users/id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"realms",
+						"WSPOT",
+						"users",
+						"id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Senha",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIwemU3WkRld204NWhtX3FMcy14MnZ1TDR5cVhTMWFZb0xLb0tXQU9Ic05zIn0.eyJleHAiOjE2NDkxNzYxNTQsImlhdCI6MTY0OTE3NjA5NCwianRpIjoiODIyMGZhOWEtNmE0OS00ZjE0LWE4N2UtZTQ5YmFiMjdjMjg2IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9tYXN0ZXIiLCJzdWIiOiJkY2YxOGUyMS00OTEyLTQ0Y2YtYmVkMy0xZjJmMWIwMjI2YTciLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJzZXNzaW9uX3N0YXRlIjoiMDg5MzI2MWItYmQ1OS00ODg5LThmOWUtNzkwYzcwMzhhYzE1IiwiYWNyIjoiMSIsInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6IjA4OTMyNjFiLWJkNTktNDg4OS04ZjllLTc5MGM3MDM4YWMxNSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWRtaW4ifQ.fqjT1_goN0rfmqqZ65M9K5LpbQD8ZAEQDF1Wm3T00X0BoBATU8vB4rr1GY4r9zZeRfOE3zUYMuLqp5wFhHy2f1XH0hKBJmmFp2-fIRe0gOFxOGOglXipjE3QDHaeI5xQZrAta15iyBBKDoNtqWYIuTpxzSEq0XOKQkcvKV06_5fFvnfhBKhx3cosMVI08-ElcEdl4qcD7jNuMYJaIPX6RkVO0ZxWffwCHjsMRINw0373J4GwGoIYVrJ9mWg9CHbsFbuu00UATbm9ojCjrJNN1B8LWYCdMNL9gVX4KgybBhVrEu4Nsg1kwfrb8GSU6tobSWLStyPWgRiC4pjW08K6Sw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n    \"credentials\": [{\n        \"type\": \"password\",\n        \"value\": \"12345678\",\n        \"temporary\": false\n    }]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/admin/realms/WSPOT/users/id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"realms",
+						"WSPOT",
+						"users",
+						"id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar Realm",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIwemU3WkRld204NWhtX3FMcy14MnZ1TDR5cVhTMWFZb0xLb0tXQU9Ic05zIn0.eyJleHAiOjE2NDkxNjc1MzEsImlhdCI6MTY0OTE2NzQ3MSwianRpIjoiYTdhZjRiMDQtM2IzMC00YTRkLTkwZDgtZjYwMTc3YzA1MTdlIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9tYXN0ZXIiLCJzdWIiOiJkY2YxOGUyMS00OTEyLTQ0Y2YtYmVkMy0xZjJmMWIwMjI2YTciLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJzZXNzaW9uX3N0YXRlIjoiMGY4MDMwOTEtODU5Mi00YWY2LWIyYzMtNzAyZjY4NGZjZTE4IiwiYWNyIjoiMSIsInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsInNpZCI6IjBmODAzMDkxLTg1OTItNGFmNi1iMmMzLTcwMmY2ODRmY2UxOCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwicHJlZmVycmVkX3VzZXJuYW1lIjoiYWRtaW4ifQ.iDEavNV8fkxSO0aAgSKpRObnVvkHAI9cAmWhnKUFjweQLJjR3_A35qRZNJJQRU1g4n1kKG6pBWcB6lH-0SEw79Yb4-sAfUFvNSZvj4oR5f0VO3MEnZE-SKhiv5XB8MqKMnOOgCFTmYQMlVN4m7ZXoSp8-SU6a_KSnvldKb0zHPr3npKmbQvKMxhy3kjS4PCxXS6jEidrqhGdJ9mpQrlfS1RHgCKbFGYiJM3sB5gZz_Oxih8yJPKrcEWTzItANZocOdeRX6lP0wIBXTJERmGGJV3-oMGYg51guHibs27xoz-AziUOPsnidz5DrvPyspgL9PTf2djv-lS79OpqBIsjjA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"realm\":\"WSPOT\",\n   \"notBefore\":0,\n   \"enabled\":true,\n   \"bruteForceProtected\":true,\n   \"failureFactor\":10,\n   \"eventsEnabled\":false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/admin/realms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"realms"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
